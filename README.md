@@ -8,10 +8,10 @@ A basic Python tool for visualizing the growth of COVID-19 cases in the US by st
 from functions import *
 
 if __name__ == '__main__':
-    filename = 'cali_25apr.png'
+    state = 'California'
     cdf = fetch_data()
-    cdf = slice_fit(cdf, state='California')
-    plot(casedf=cdf, saveloc=filename)
+    cdf = slice_fit(cdf, state=state)
+    plot(casedf=cdf, state=state)
 ```
 
 ### Output:
