@@ -7,15 +7,18 @@ A basic Python tool for visualizing the growth of COVID-19 cases in the US by st
 ```
 from functions import *
 
-if __name__ == '__main__':
-    filename = 'cali_25apr.png'
-    cdf = fetch_data()
-    cdf = slice_fit(cdf, state='California')
-    plot(casedf=cdf, saveloc=filename)
+cdf = fetch_data()    # cases data
+cdf = slice_fit(cdf, state='Illinois')
+
+ddf = fetch_data(cases_data=False)    # deaths data
+ddf = slice_fit(ddf, state='Illinois')
+
+plot(deathdf=ddf, casedf=cdf, state='Illinois')
+
 ```
 
 ### Output:
-![COVID cases in California](data/cali_25apr.png)
+![COVID cases in Illinois](data/illinois_25apr.png)
 
 
 
