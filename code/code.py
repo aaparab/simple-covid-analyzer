@@ -13,10 +13,10 @@ if __name__ == '__main__':
     
     # Illinois state (default)
     state = 'Illinois'
-    filename = 'illinois_26apr.png'
+    filename = 'illinois_29apr.png'
     illinois_cases = slice_fit(casedf)
     illinois_deaths = slice_fit(deathdf)
-    plot(deathdf=illinois_deaths, casedf=illinois_deaths, saveloc=os.path.join(datapath, filename))
+    plot(deathdf=illinois_deaths, casedf=illinois_cases, saveloc=os.path.join(datapath, filename))
 
     # Illinois cases (cumulative)
     state = 'Illinois'
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     
     # California state
     state = 'California'
-    filename = 'cali_26apr.png'
+    filename = 'cali_29apr.png'
     cali_cases = slice_fit(casedf, state=state, polydeg=8)
     plot(casedf=cali_cases, state=state, saveloc=os.path.join(datapath, filename))
 
