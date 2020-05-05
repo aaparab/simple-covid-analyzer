@@ -18,7 +18,7 @@ plot(deathdf=illinois_deaths, casedf=illinois_deaths)
 
 Produces the following output:
 
-![COVID cases in Illinois](data/illinois_26apr.png)
+![COVID cases in Illinois](data/illinois.png)
 
 To visualize cumulative cases/deaths, set the `cumulative=True` argument in the `plot` function:
 

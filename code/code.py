@@ -13,7 +13,7 @@ if __name__ == '__main__':
     
     # Illinois state (default)
     state = 'Illinois'
-    filename = 'illinois_29apr.png'
+    filename = 'illinois.png'
     illinois_cases = slice_fit(casedf)
     illinois_deaths = slice_fit(deathdf)
     plot(deathdf=illinois_deaths, casedf=illinois_cases, saveloc=os.path.join(datapath, filename))
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     
     # California state
     state = 'California'
-    filename = 'cali_29apr.png'
+    filename = 'cali.png'
     cali_cases = slice_fit(casedf, state=state, polydeg=8)
     plot(casedf=cali_cases, state=state, saveloc=os.path.join(datapath, filename))
 
