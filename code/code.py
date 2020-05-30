@@ -24,9 +24,9 @@ if __name__ == '__main__':
     plot(casedf=illinois_cases, fit=True, cumulative=True, saveloc=os.path.join(datapath, filename))
     
     # California state
-    state = 'California'
-    filename = 'cali.png'
-    cali_cases = slice_fit(casedf, state=state, polydeg=8)
-    plot(casedf=cali_cases, state=state, saveloc=os.path.join(datapath, filename))
+    state = 'New York'
+    filename = 'ny.png'
+    ny_cases = slice_fit(casedf, state=state, polydeg=8)
+    plot(casedf=ny_cases, state=state, saveloc=os.path.join(datapath, filename))
 
     print('Program completed successfully.')
